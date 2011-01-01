@@ -28,11 +28,11 @@
 	separator_height = 2
 	gap_size = 0
     frame_width = 2
-    frame_color = "#928374"
+    frame_color = "#444444"
     separator_color = frame
 	corner_radius = 0
 
-	font = Monospace 10
+	font = Hack 10
 	line_height = 0
 	alignment = left
 	vertical_alignment = center
@@ -65,8 +65,8 @@
 
     ## icons
     icon_position = left
-    min_icon_size = 144 
-    max_icon_size = 144 
+    min_icon_size = 95 
+    max_icon_size = 100 
     icon_path = /dev/null
 
     ## history
@@ -103,13 +103,13 @@
 [urgency_low]
     background = "#d1d2d2"
     foreground = "#454545"
-    frame_color = "#b16286"
+    frame_color = "#444444"
     timeout = 3
 
 [urgency_normal]
     background = "#d1d2d2"
     foreground = "#454545"
-    frame_color = "#458588"
+    frame_color = "#444444"
     timeout = 6
 
 [urgency_critical]

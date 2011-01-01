@@ -11,28 +11,28 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+Shift+q kill
 
-
+# close sway sesion
+bindsym $mod+shift+e exit
 
 # this is the changes I made :>
 for_window [class=".*"] border pixel 1
 for_window [class="^.*"] border pixel 0
 default_border none
-gaps inner 5
-gaps outer 5
-smart_gaps on
+gaps inner 3
+gaps outer 3
+
+set $swayBG "$HOME/Pictures/Wallpaper/"
 
 exec dunst &
-exec swaybg -i Pictures/Wallpaper/heroscreen-20042022-essense4k.png -m fill
-
+exec swaybg -i $swayBG/pokemon.png -m fill
+exec udiskie --automount --notify
 
 ## bindsym
-bindsym $mod+c exec alacritty -e ranger
-bindsym $mod+Print exec grimshot --notify copy area
-bindsym $mod+shift+Print exec grimshot --notify copy output
+bindsym $mod+c exec  kitty -e ranger
+bindsym $mod+p exec grimshot --notify copy area
+bindsym $mod+shift+p exec grimshot --notify copy output
 bindsym $mod+d exec rofi -show drun -display-drun "search "
-bindsym $mod+z exec redshift -O 5000
-bindsym $mod+x exec redshift -x
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 ## light
 
@@ -63,24 +63,12 @@ input * {
 
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -95,22 +83,11 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -151,10 +128,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -164,12 +137,6 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
