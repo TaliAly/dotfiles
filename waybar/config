@@ -16,14 +16,14 @@
          "all-outputs": true,
          "format": "{icon}",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
+             "1": "",
+             //"2": "",
+             //"3": "",
+             //"4": "",
+             //"5": "",
              //"urgent": "",
-             //"focused": "",
-             //"default": ""
+             "focused": "",
+             "default": ""
          }
      },
     "keyboard-state": {
@@ -82,7 +82,8 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+	"on-click": "htop"
     },
     "temperature": {
         // "thermal-zone": 2,
