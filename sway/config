@@ -18,31 +18,33 @@ bindsym $mod+shift+e exit
 for_window [class=".*"] border pixel 1
 for_window [class="^.*"] border pixel 0
 default_border none
-gaps inner 3
-gaps outer 3
+gaps inner 1
+gaps outer 1
+smart_gaps on
 
-set $swayBG "$HOME/Pictures/Wallpaper/"
+set $swayBG "$HOME/Images/Wallpaper"
 
 exec dunst &
-exec swaybg -i $swayBG/pokemon.png -m fill
-exec udiskie --automount --notify
+exec swaybg -i $swayBG/taki.png -m fill &
+exec udiskie --automount --notify --tray
 
+
+
+set $libgl "LIBGL_ALWAYS_SOFTWARE=1"
 ## bindsym
-bindsym $mod+c exec  kitty -e ranger
+bindsym $mod+c exec LIBGL_ALWAYS_SOFTWARE=1 kitty -e ranger
 bindsym $mod+p exec grimshot --notify copy area
 bindsym $mod+shift+p exec grimshot --notify copy output
-bindsym $mod+d exec rofi -show drun -display-drun "search "
-bindsym $mod+Return exec kitty
+bindsym $mod+d exec rofi -show drun -show-icons
+bindsym $mod+Return exec LIBGL_ALWAYS_SOFTWARE=1 kitty
 
-## light
-
-bindsym $mod+shift+o exec light -A 20
-bindsym $mod+shift+i exec light -U 20
+# Record Video
+bindsym $mod+shift+x exec wf-recorder -c libx264rgb -f $HOME/Videos/Recordings/$(date +%F_%T.mp4)
+bindsym $mod+shift+z exec pkill --signal SIGINT wf-recorder
 
 bar {
   strip_workspace_numbers yes
   swaybar_command waybar
-  strip_workspace_numbers yes
 }
 
 input * {
@@ -51,7 +53,8 @@ input * {
     xkb_options "grp:win_space_toggle"
 }
 
-
+for_window [class="feh"] floating enable
+for_window [class="vlc"] floating enable
 
 
 ################################################
@@ -126,7 +129,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# reload the configuration file
+# reload sway
 bindsym $mod+Shift+c reload
 
 # resize window (you can also use the mouse for that)
