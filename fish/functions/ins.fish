@@ -1,3 +1,3 @@
-function ins --wraps='sudo xbps-install -S' --description 'alias ins sudo xbps-install -S'
-  sudo xbps-install -S $argv; 
+function ins --wraps='sudo xbps-install' --description 'alias ins sudo xbps-install'
+  sudo xbps-install $argv; 
 end

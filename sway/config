@@ -18,9 +18,8 @@ bindsym $mod+shift+e exit
 for_window [class=".*"] border pixel 1
 for_window [class="^.*"] border pixel 0
 default_border none
-gaps inner 1
-gaps outer 1
-smart_gaps on
+gaps inner 5
+gaps outer 5
 
 set $swayBG "$HOME/Images/Wallpaper"
 
