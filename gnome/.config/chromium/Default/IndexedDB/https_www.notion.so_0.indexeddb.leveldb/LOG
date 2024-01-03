@@ -1,0 +1,7 @@
+2024/01/03-17:36:58.200 794a Reusing MANIFEST /home/takis/.config/chromium/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/03-17:36:58.201 794a Recovering log #35
+2024/01/03-17:36:58.220 794a Reusing old log /home/takis/.config/chromium/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/000035.log 
+2024/01/03-17:37:00.295 7977 Level-0 table #41: started
+2024/01/03-17:37:00.306 7977 Level-0 table #41: 268051 bytes OK
+2024/01/03-17:37:00.312 7977 Delete type=0 #35
+2024/01/03-17:37:00.314 794a Manual compaction at level-0 from '\x00\x0a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0b\x00\x00\x00' @ 0 : 0; will stop at (end)

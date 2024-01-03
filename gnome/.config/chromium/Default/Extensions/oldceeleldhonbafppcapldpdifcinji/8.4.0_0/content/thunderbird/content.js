@@ -1,0 +1,1 @@
+!self.__linkTransformerInjected&&self.name&&self.name.startsWith("lt-login-")&&(self.__linkTransformerInjected=!0,document.addEventListener("click",(function(e){if(!(e.target instanceof HTMLElement))return;const t=e.target.closest("a[href]");t&&(location.href=t.href,e.preventDefault())})));

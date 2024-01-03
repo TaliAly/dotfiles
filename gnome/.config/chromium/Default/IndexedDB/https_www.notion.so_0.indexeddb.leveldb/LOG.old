@@ -1,0 +1,20 @@
+2024/01/03-17:09:29.698 6e9c Reusing MANIFEST /home/takis/.config/chromium/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/03-17:09:29.699 6e9c Recovering log #32
+2024/01/03-17:09:29.699 6e9c Reusing old log /home/takis/.config/chromium/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/000032.log 
+2024/01/03-17:09:31.780 6ec9 Level-0 table #36: started
+2024/01/03-17:09:31.783 6ec9 Level-0 table #36: 541 bytes OK
+2024/01/03-17:09:31.789 6ec9 Delete type=0 #32
+2024/01/03-17:09:31.792 6e9c Manual compaction at level-0 from '\x00\x09\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0a\x00\x00\x00' @ 0 : 0; will stop at '\x00\x09\x00\x00\x05' @ 171033 : 1
+2024/01/03-17:09:31.792 6e9c Compacting 1@0 + 1@1 files
+2024/01/03-17:09:31.803 6e9c Generated table #37@0: 2062 keys, 26039 bytes
+2024/01/03-17:09:31.803 6e9c Compacted 1@0 + 1@1 files => 26039 bytes
+2024/01/03-17:09:31.810 6e9c compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/01/03-17:09:31.810 6e9c Delete type=2 #36
+2024/01/03-17:09:31.811 6e9c Manual compaction at level-0 from '\x00\x09\x00\x00\x05' @ 171033 : 1 .. '\x00\x0a\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/01/03-17:10:15.862 6e9d Compacting 1@1 + 1@2 files
+2024/01/03-17:10:15.883 6e9d Generated table #38@1: 11474 keys, 413885 bytes
+2024/01/03-17:10:15.883 6e9d Compacted 1@1 + 1@2 files => 413885 bytes
+2024/01/03-17:10:15.887 6e9d compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/01/03-17:10:15.888 6e9d Delete type=2 #30
+2024/01/03-17:10:15.888 6e9d Delete type=2 #33
+2024/01/03-17:10:15.888 6e9d Delete type=2 #37

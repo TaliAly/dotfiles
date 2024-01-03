@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title data-t="changelogTitle">New LanguageTool features</title>
+		<link rel="stylesheet" href="../common/base.css" />
+		<link rel="stylesheet" href="./changelog.css" />
+		<link rel="shortcut icon" href="../assets/images/lt-favicon-color_notification.png" id="favicon" />
+	</head>
+
+	<body>
+		<a
+			href="https://languagetool.org/premium?utm_campaign=addon2-changelog-navlink"
+			class="navigation-link"
+			target="_blank"
+		>
+			<div id="changelog-navigation-top" class="navigation">
+				<div class="navigation-wrapper">
+					<div class="navigation__logo">
+						<div>
+							<div class="name">LanguageTool</div>
+							<div class="slogan" data-t="privacyNoteSlogan"></div>
+						</div>
+					</div>
+
+					<div class="navigation__teaser">
+						<div class="navigation__teaser__discount">
+							<span class="navigation__teaser__discount__number header-discount">20</span>
+							<span class="number-stack">
+								<span class="navigation__teaser__discount__percentage">%</span>
+								<span
+									data-t="changelog2020DiscountHeaderDiscount"
+									class="navigation__teaser__discount__off"
+								></span>
+							</span>
+						</div>
+						<div class="navigation__teaser__text">
+							<h3
+								data-t="changelog2020DiscountHeaderHeadline"
+								class="navigation__teaser__text__headline"
+							></h3>
+							<div>
+								<span
+									data-t="changelog2020DiscountHeaderDescription"
+									class="navigation__teaser__text__subline"
+									>Take your writing to the next level</span
+								>
+								<span data-t="changelog2020DiscountHeaderLink" class="link"></span>
+							</div>
+						</div>
+					</div>
+					<div class="timer">
+						<div id="countdown" class="navigation__count-down"></div>
+						<div class="timer__labels">
+							<div
+								data-t="changelog2020TimerHourPlural"
+								class="timer__labels__label"
+								id="timer__labels__label--hour"
+							></div>
+							<div
+								data-t="changelog2020TimerMinutePlural"
+								class="timer__labels__label"
+								id="timer__labels__label--minute"
+							></div>
+							<div
+								data-t="changelog2020TimerSecondPlural"
+								class="timer__labels__label"
+								id="timer__labels__label--second"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<div class="header">
+			<div class="content-wrapper center">
+				<div class="lt-hint">
+					<span data-t="changelog2020LtInfoText">Hey, there! News from LanguageTool!</span>
+				</div>
+				<div class="text-wrapper center">
+					<h1 data-t="changelog2023MainHeadline" class="headline headline--1"></h1>
+					<span data-t="changelog2023MainSubHeadline" class="main-headline-addition"></span>
+					<p data-t="changelog2023IntroText" class="paragraph paragraph--2"></p>
+				</div>
+
+				<ul class="header__cards" id="cards">
+					<!-- AI Teaser -->
+					<!-- Since we talked about this in the big headline already, I'd opt for not showing this in the overview to save space -->
+					<!-- <li class="header__cards__card header__cards__card--ai" id="ai-teaser">
+						<div>
+							<h2 data-t="changelog2023FeatureTeaserAiHeadline" class="headline headline--3"></h2>
+							<p data-t="changelog2023FeatureTeaserAiDescription" class="paragraph paragraph--3"></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#ai"></a>
+					</li> -->
+
+					<!-- Paraphrasing Teaser -->
+					<li class="header__cards__card header__cards__card--paraphrasing" id="paraphrasing-teaser">
+						<div>
+							<h2
+								data-t="changelog2023FeatureTeaserParaphrasingHeadline"
+								class="headline headline--3"
+							></h2>
+							<p
+								data-t="changelog2023FeatureTeaserParaphrasingDescription"
+								class="paragraph paragraph--3"
+							></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#paraphrasing"></a>
+					</li>
+
+					<!-- French Version Teaser -->
+					<li class="header__cards__card header__cards__card--french-version" id="french-version-teaser">
+						<div>
+							<h2
+								data-t="changelog2023FeatureTeaserFrenchVersionHeadline"
+								class="headline headline--3"
+							></h2>
+							<p
+								data-t="changelog2023FeatureTeaserFrenchVersionDescription"
+								class="paragraph paragraph--3"
+							></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#french-version"></a>
+					</li>
+
+					<!-- Windows Teaser -->
+					<li class="header__cards__card header__cards__card--desktop-windows" id="desktop-windows-teaser">
+						<div>
+							<h2 data-t="changelog2023FeatureTeaserWindowsHeadline" class="headline headline--3"></h2>
+							<p data-t="changelog2023FeatureTeaserWindowsDescription" class="paragraph paragraph--3"></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#desktop-windows"></a>
+					</li>
+
+					<!-- Mac Teaser -->
+					<li class="header__cards__card header__cards__card--desktop-mac" id="desktop-mac-teaser">
+						<div>
+							<h2 data-t="changelog2023FeatureTeaserMacHeadline" class="headline headline--3"></h2>
+							<p data-t="changelog2023FeatureTeaserMacDescription" class="paragraph paragraph--3"></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#desktop-mac"></a>
+					</li>
+
+					<!-- LibreOffice Teaser -->
+					<li class="header__cards__card header__cards__card--libreoffice" id="libreoffice-teaser">
+						<div>
+							<h2
+								data-t="changelog2022FeatureTeaserLibreOfficeHeadline"
+								class="headline headline--3"
+							></h2>
+							<p
+								data-t="changelog2022FeatureTeaserLibreOfficeDescription"
+								class="paragraph paragraph--3"
+							></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#libreoffice"></a>
+					</li>
+
+					<!-- Styleguide teaser -->
+					<li class="header__cards__card header__cards__card--style-guide" id="style-guide-teaser">
+						<div>
+							<h2 data-t="changelog2022FeatureTeaserStyleGuideHeadline" class="headline headline--3"></h2>
+							<p
+								data-t="changelog2022FeatureTeaserStyleGuideDescription"
+								class="paragraph paragraph--3"
+							></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#style-guide"></a>
+					</li>
+
+					<!-- Statistics Teaser -->
+					<li class="header__cards__card header__cards__card--statistics" id="statistics-teaser">
+						<div>
+							<h2 data-t="changelog2023FeatureTeaserStatisticsHeadline" class="headline headline--3"></h2>
+							<p
+								data-t="changelog2023FeatureTeaserStatisticsDescription"
+								class="paragraph paragraph--3"
+							></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#statistics"></a>
+					</li>
+
+					<!-- Writing Goals Teaser -->
+					<li class="header__cards__card header__cards__card--writing-goals" id="writing-goals-teaser">
+						<div>
+							<h2
+								data-t="changelog2023FeatureTeaserWritingGoalsHeadline"
+								class="headline headline--3"
+							></h2>
+							<p
+								data-t="changelog2023FeatureTeaserWritingGoalsDescription"
+								class="paragraph paragraph--3"
+							></p>
+						</div>
+						<a data-t="changelog2020FeatureTeaserLink" class="link" href="#writing-goals"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="divider-image"></div>
+
+		<!-- AI -->
+		<section id="ai" class="section--split section--ai">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-ai"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionAiHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2023FeatureSectionAiDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-ai"
+						target="_blank"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--ai__visual"></div>
+			</div>
+		</section>
+
+		<!-- Paraphrasing -->
+		<section id="paraphrasing" class="section--split section--paraphrasing">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-paraphrasing"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionParaphrasingHeadline" class="headline headline--2"></h2>
+					<p
+						data-t-html="changelog2023FeatureSectionParaphrasingDescription"
+						class="paragraph paragraph--1"
+						id="enable-paraphrasing-description"
+					></p>
+					<a
+						class="btn-primary"
+						data-t="changelog2022FeatureEnableRephrasingLink"
+						id="enable-paraphrasing-link"
+						target="_blank"
+					></a>
+					<a
+						class="btn-secondary"
+						data-t="changelog2020FeatureTeaserLink"
+						target="_blank"
+						id="learn-more-paraphrasing-link"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--paraphrasing__visual"></div>
+			</div>
+		</section>
+
+		<!-- French Version -->
+		<section id="french-version" class="section--split section--style">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-french-version"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionFrenchVersionHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2023FeatureSectionFrenchVersionDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-french-version"
+						target="_blank"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--french-version__visual"></div>
+			</div>
+		</section>
+
+		<!-- Desktop macOS -->
+		<section id="desktop-mac" class="section--split section--desktop-mac">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-mac"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionMacHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2023FeatureSectionMacDescription" class="paragraph paragraph--1"></p>
+					<div class="btn-store-wrapper">
+						<a
+							class="btn-store btn-store--mac"
+							href="https://languagetool.org/mac-desktop?utm_campaign=addon2-changelog-11-2023-mac"
+							target="_blank"
+						></a>
+						<a
+							class="btn-secondary"
+							target="_blank"
+							id="learn-more-mac-link"
+							data-t="changelog2022FeatureLearnHowToUseItLink"
+						></a>
+					</div>
+				</div>
+				<div class="section--split__columns__column section--desktop-mac__visual"></div>
+			</div>
+		</section>
+
+		<!-- Desktop Windows -->
+		<section id="desktop-windows" class="section--split section--desktop-windows">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-windows"
+						target="_blank"
+					></a>
+					<h2
+						data-t="changelog2023FeatureSectionWindowsHeadline"
+						class="headline headline--2 headline--beta"
+					></h2>
+					<p data-t="changelog2023FeatureSectionWindowsDescription" class="paragraph paragraph--1"></p>
+					<div class="btn-store-wrapper">
+						<a
+							class="btn-store btn-store--windows"
+							href="https://languagetool.org/windows-desktop?utm_campaign=addon2-changelog-11-2023-windows"
+							target="_blank"
+						></a>
+						<a
+							class="btn-secondary"
+							target="_blank"
+							id="learn-more-windows-link"
+							data-t="changelog2022FeatureLearnHowToUseItLink"
+						></a>
+					</div>
+				</div>
+				<div class="section--split__columns__column section--desktop-windows__visual"></div>
+			</div>
+		</section>
+
+		<!-- Statistics -->
+		<section id="statistics" class="section--split section--statistics">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-statistics"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionStatisticsHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2023FeatureSectionStatisticsDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-statistics"
+						target="_blank"
+					></a>
+					<a
+						class="btn-secondary"
+						target="_blank"
+						id="learn-more-statistics-link"
+						data-t="changelog2020FeatureTeaserLink"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--statistics__visual"></div>
+			</div>
+		</section>
+
+		<!-- Writing Goals -->
+		<section id="writing-goals" class="section--split section--writing-goals">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-writing-goals"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionWritingGoalsHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2023FeatureSectionWritingGoalsDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-writing-goals"
+						target="_blank"
+					></a>
+					<a
+						class="btn-secondary"
+						target="_blank"
+						id="learn-more-writing-goals-link"
+						data-t="changelog2020FeatureTeaserLink"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--writing-goals__visual"></div>
+			</div>
+		</section>
+
+		<!-- Style Guide -->
+		<section id="style-guide" class="section--split section--style-guide">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-style-guide"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2022FeatureSectionStyleGuideHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2022FeatureSectionStyleGuideDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-style-guide"
+						target="_blank"
+					></a>
+					<a
+						class="btn-secondary"
+						href="https://languagetool.org/insights/post/personal-style-guide/?utm_campaign=addon2-changelog-11-2023-style-guide"
+						target="_blank"
+						data-t="changelog2020FeatureTeaserLink"
+						id="learn-more-style-guide-link"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--style-guide__visual"></div>
+			</div>
+		</section>
+
+		<!-- Libre Office -->
+		<section id="libreoffice" class="section--split section--style gradient">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-libreoffice"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2022FeatureSectionLibreOfficeHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2022FeatureSectionLibreOfficeDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-libreoffice"
+						target="_blank"
+					></a>
+					<a
+						class="btn-secondary"
+						href="https://languagetool.org/insights/post/product-libreoffice/?utm_campaign=addon2-changelog-11-2023-libreoffice"
+						target="_blank"
+						id="learn-more-libreoffice-link"
+						data-t="changelog2022FeatureLearnHowToUseItLink"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--libreoffice__visual"></div>
+			</div>
+		</section>
+
+		<!-- User MGMT -->
+		<section id="user-mgmt" class="section--split section--user-mgmt gradient">
+			<div class="section--split__columns content-wrapper">
+				<div class="section--split__columns__column">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-user-mgmt"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2023FeatureSectionUserMgmtHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2023FeatureSectionUserMgmtDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-user-mgmt"
+						target="_blank"
+					></a>
+					<a
+						class="btn-secondary"
+						target="_blank"
+						id="learn-more-user-mgmt-link"
+						data-t="changelog2020FeatureTeaserLink"
+					></a>
+				</div>
+				<div class="section--split__columns__column section--user-mgmt__visual"></div>
+			</div>
+		</section>
+
+		<section class="section--services">
+			<div class="section-center content-wrapper center">
+				<div class="text-wrapper">
+					<a
+						class="premium-tag"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-signoff"
+						target="_blank"
+					></a>
+					<h2 data-t="changelog2020FeatureSectionServicesHeadline" class="headline headline--2"></h2>
+					<p data-t="changelog2020FeatureSectionServicesDescription" class="paragraph paragraph--1"></p>
+					<a
+						class="btn-primary upgrade-link"
+						href="https://languagetool.org/premium?utm_campaign=addon2-changelog-11-2023-signoff"
+						target="_blank"
+					></a>
+				</div>
+			</div>
+		</section>
+
+		<div class="made-in-eu">
+			<span class="made-in-eu__flag"
+				>Made in Germany, Spain, France, the UK and the Netherlands &nbsp;<a
+					class="link"
+					href="https://languagetool.org/legal/"
+					target="_blank"
+					>|&nbsp; Imprint</a
+				></span
+			>
+		</div>
+
+		<script src="../common/loadFonts.js"></script>
+		<script src="./changelog.js"></script>
+	</body>
+</html>

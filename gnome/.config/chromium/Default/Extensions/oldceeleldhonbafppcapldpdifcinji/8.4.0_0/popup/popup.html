@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html data-lt-adjust-appearance="true" data-lt-force-appearance="default">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>LanguageTool</title>
+
+		<link rel="stylesheet" href="../common/base.css" />
+		<link rel="stylesheet" href="./popup.css" />
+	</head>
+
+	<body>
+		<div id="popup-container" class="lt-popup">
+			<div class="lt-popup__header">
+				<a
+					target="_blank"
+					href="https://languagetool.org/?utm_campaign=addon2-popup-logo"
+					class="lt-popup__headline lt-icon__lt"
+					id="lt-popup-logo"
+				>
+					Language<strong>Tool</strong>
+				</a>
+				<a class="lt-popup__header__badge-container" id="lt-popup__package-badge-container"></a>
+			</div>
+
+			<div id="popup-onboarding" class="lt-popup__onboarding">
+				<h2 data-t="popupOnboardingHeadline"></h2>
+				<ol>
+					<li>
+						<p id="popup-onboarding-text-1"></p>
+					</li>
+					<li>
+						<p id="popup-onboarding-text-2"></p>
+					</li>
+					<li>
+						<p id="popup-onboarding-text-3"></p>
+					</li>
+					<li>
+						<p id="popup-onboarding-text-4"></p>
+					</li>
+				</ol>
+				<div class="lt-popup__button--secondary" id="onboarding-button" data-t="confirm"></div>
+			</div>
+
+			<div id="popup-hint" class="lt-popup__hint"></div>
+
+			<div class="lt-popup__settings" id="popup-website-settings">
+				<div class="popup-option-title">
+					<h2 data-t="popupSettingsHeadline"></h2>
+					<span class="popup-option-title__info" data-t="popupSettingsHeadlineInfo"></span>
+				</div>
+				<div id="popup-option-check" class="lt-popup__option">
+					<span data-t="popupOptionCheckText"></span>
+					<span class="lt-popup__switch"></span>
+				</div>
+			</div>
+
+			<div class="lt-popup__settings" id="popup-global-settings">
+				<div class="popup-option-title">
+					<h2 data-t="popupGlobalSettingsHeadline"></h2>
+					<span class="popup-option-title__info" data-t="popupGlobalSettingsHeadlineInfo"></span>
+				</div>
+				<div id="popup-option-picky-mode" class="lt-popup__option">
+					<div class="lt-popup__option__description">
+						<span class="lt-popup__option__headline" data-t="popupOptionPickyMode"></span>
+						<span class="lt-popup__option__subline" data-t="popupOptionPickyModeDescription"></span>
+					</div>
+					<span class="lt-popup__switch"></span>
+				</div>
+				<div id="popup-option-synonyms" class="lt-popup__option lt-popup__option--switch-off">
+					<div class="lt-popup__option__description">
+						<span class="lt-popup__option__headline" data-t="popupOptionSynonyms"></span>
+						<span class="lt-popup__option__subline" data-t="popupOptionSynonymsDescription"></span>
+					</div>
+					<span class="lt-popup__switch"></span>
+				</div>
+			</div>
+
+			<div class="lt-popup__validator">
+				<div
+					class="lt-popup__button lt-popup__button--edit"
+					id="popup-validator-button"
+					data-t="popupOpenEditorButton"
+				></div>
+			</div>
+			<div id="popup-teaser" class="lt-popup__teaser"></div>
+		</div>
+		<div class="lt-popup__footer">
+			<span class="lt-popup__feedback-link" data-t="sendFeedback" id="feedback-link"></span>
+			<a
+				href="https://languagetool.com/editor/statistics"
+				target="_blank"
+				class="lt-popup__user-statistics-link lt-icon__user-statistics lt-popup__tooltip-anchor"
+				data-t-title="userStatisticsHeadline"
+				data-tooltip="popupUserStatisticsHover"
+				id="user-statistics-link"
+			>
+			</a>
+			<span
+				id="popup-more-options-link"
+				class="lt-popup__more-options-link lt-icon__options lt-popup__tooltip-anchor"
+				data-t-title="settingsHeadline"
+				data-tooltip="popupSettingsHover"
+			>
+			</span>
+		</div>
+
+		<script src="../common/loadFonts.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>
