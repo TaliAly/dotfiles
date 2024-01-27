@@ -1,13 +1,30 @@
-# Dotfiles!
+# Allyson Rowe's Dotfiles
 
-Welp, this are my dotfiles, just the things I use
+A simple storage for my dotfiles in my linux machine.
+I'm using [Stow](https://www.gnu.org/software/stow/) as my manager for dotfiles, in case that you're interested.
 
-Well then, my Dotfiles are simple.
+About me:
+- Linux user | Open Suse
+- Neovim
+- Dead simple
 
-### Some requirements:
+## Requirements
+Set [fish](https://fishshell.com/) as your main shell
 
-* The font "Hack" installed
+```
+chsh -s $(which fish)
+```
+## Instalation
 
-* The font "Font Awesome" installed
+```sh
+git clone https://github.com/TaliAly/dotfiles.git ~/.dotfiles
 
-AAAAnd that's it, the software I use is in the folders, so try searching for it on your package manager.
+# or if you prefer ssh
+git clone git@github.com:TaliAly/dotfiles.git ~/.dotfiles
+
+```
+
+## Todo's
+
+## Credit
+This repo has a lot of code adapted/implemented from [Theprimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles), so you should really go check it out.

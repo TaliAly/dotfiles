@@ -1,1 +1,0 @@
-!function(){const n=document.execCommand;document.execCommand=function(t){return"print"===t?(this.defaultView.print(),!0):n.apply(this,arguments)}}();

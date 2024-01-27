@@ -1,0 +1,18 @@
+[user]
+	name = Tali
+    email = allysonnomuraga@gmail.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+    clean = git-lfs clean -- %f
+[alias]
+    cp = cherry-pick
+    undo = reset HEAD~
+    amend = commit --amend --no-edit
+[log]
+    date = human
+[help]
+	autocorrect = 1
+[protocol]
+	version = 2

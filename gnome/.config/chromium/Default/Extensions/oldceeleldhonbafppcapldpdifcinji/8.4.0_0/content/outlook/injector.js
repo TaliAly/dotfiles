@@ -1,1 +1,0 @@
-!function(){if(self.parent===self)return;const e=document.createElement("script"),o="object"==typeof browser?browser:self.chrome;e.src=o.runtime.getURL("/content/outlook/content.js"),e.onload=function(){e.remove()},e.onerror=function(){e.remove()},(document.head||document.documentElement).appendChild(e)}();

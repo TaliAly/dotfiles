@@ -1,0 +1,13 @@
+nvim/.config/nvim/plugin/packer_compiled.lua
+
+# just fish
+fish/.config/fish/fishd.*
+fish/.config/fish/config.fish.backup
+fish/.config/fish/fish_history
+fish/.config/fish/fish_variables
+
+# Since I use fisher, I have a lot of files
+fish/.config/fish/functions/*
+!fish/.config/fish/functions/fisher.fish
+!fish/.config/fish/functions/log.fish
+

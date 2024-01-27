@@ -1,9 +1,0 @@
-2024/01/03-17:09:28.039 4 Reusing MANIFEST /home/takis/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
-2024/01/03-17:09:28.042 4 Recovering log #156
-2024/01/03-17:09:28.043 4 Reusing old log /home/takis/.config/chromium/Default/Local Storage/leveldb/000156.log 
-2024/01/03-17:09:51.341 4 Level-0 table #161: started
-2024/01/03-17:09:51.363 4 Level-0 table #161: 621471 bytes OK
-2024/01/03-17:09:51.370 4 Delete type=0 #156
-2024/01/03-17:29:17.123 5 Level-0 table #163: started
-2024/01/03-17:29:17.129 5 Level-0 table #163: 22619 bytes OK
-2024/01/03-17:29:17.135 5 Delete type=0 #160
