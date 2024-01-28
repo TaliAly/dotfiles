@@ -14,6 +14,12 @@ Set [fish](https://fishshell.com/) as your main shell
 ```
 chsh -s $(which fish)
 ```
+
+- [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation)
+- [Neovim | Packer](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+- [Fisher | Fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation)
+
+
 ## Instalation
 
 ```sh
@@ -24,7 +30,12 @@ git clone git@github.com:TaliAly/dotfiles.git ~/.dotfiles
 
 ```
 
+and then just run
+```sh
+./bootstrap.sh
+```
+
 ## Todo's
 
-## Credit
+## Credits
 This repo has a lot of code adapted/implemented from [Theprimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles), so you should really go check it out.
