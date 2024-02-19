@@ -21,7 +21,7 @@ lsp_zero.format_on_save({
         timeout_ms = 10000,
     },
     servers = {
-        ['biome'] = { 'javascript', 'typescript' },
+        ['biome'] = { 'javascript', 'typescript', 'tsx', 'jsx' },
         ['beautysh'] = { 'bash', 'sh', 'zsh' },
         ['ast-grep'] = { 'rust', 'css', 'c++', 'c', 'go' },
         ['rust_analyzer'] = { 'rust' },

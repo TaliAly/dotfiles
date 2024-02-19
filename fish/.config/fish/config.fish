@@ -3,6 +3,11 @@ if status is-interactive
     alias pls 'sudo'
     alias session "~/.bin/scripts/tmux-sessionizer"
     alias clr "clear"
+    alias zyp "zypper"
+    alias plszyp "sudo zypper"
+    alias ls "eza"
+    alias trees "eza --tree --color always | less -R"
+    alias pfetch "sh $HOME/.bin/scripts/pfetch/pfetch"
 
 end
 

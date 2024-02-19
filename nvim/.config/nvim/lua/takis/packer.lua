@@ -13,9 +13,10 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use { "catppuccin/nvim", as = "catppuccin", config = function()
-        vim.cmd('colorscheme catppuccin')
+    use { "rose-pine/neovim", as = "rose-pine", config = function()
+        vim.cmd('colorscheme rose-pine')
     end }
+
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
@@ -68,6 +69,24 @@ return require('packer').startup(function(use)
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
+        end
+    }
+
+    -- Discord Rich presence, just to flex 💪
+    use 'andweeb/presence.nvim'
+
+    -- Codeium or an AI-completer because I'm lazy af
+    -- Remove the `use` here if you're using folke/lazy.nvim.
+    use {
+        'Exafunction/codeium.vim',
+        config = function()
+            -- Change '<C-g>' here to any keycode you like.
+            vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+            vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
         end
     }
 end)
