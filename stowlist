@@ -4,3 +4,7 @@ git
 kitty
 nvim
 tmux
+dunst
+hypr
+waybar
+wofi

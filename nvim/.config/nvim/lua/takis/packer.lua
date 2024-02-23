@@ -72,7 +72,7 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- Discord Rich presence, just to flex 💪
+    -- Discord Rich presence, just to flex
     use 'andweeb/presence.nvim'
 
     -- Codeium or an AI-completer because I'm lazy af

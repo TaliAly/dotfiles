@@ -1,5 +1,9 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    #
+    set fish_greeting "" # no greeting
+
+
     alias pls 'sudo'
     alias session "~/.bin/scripts/tmux-sessionizer"
     alias clr "clear"
@@ -7,7 +11,6 @@ if status is-interactive
     alias plszyp "sudo zypper"
     alias ls "eza"
     alias trees "eza --tree --color always | less -R"
-    alias pfetch "sh $HOME/.bin/scripts/pfetch/pfetch"
 
 end
 

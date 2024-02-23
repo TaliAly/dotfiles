@@ -9,33 +9,52 @@ About me:
 - Dead simple
 
 ## Requirements
-Set [fish](https://fishshell.com/) as your main shell
+
+- [Stow](https://www.gnu.org/software/stow/)
+- [Fish](https://fishshell.com/)
+
+Depending on your distro, you need to install
+
+```
+sudo zypper install fish stow
+sudo dnf install fish stow
+sudo pacman -S fish stow
+sudo apt install fish stow
+```
+
+Then set your default shell to fish
 
 ```
 chsh -s $(which fish)
 ```
 
-- [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation)
-- [Neovim | Packer](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
-- [Fisher | Fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation)
+## Packages
+
+You can search each package later if you want to. But you'll need to install these
+
+```
+fzf neovim tmux eza hyprland wofi waybar dunst blight 
+
+```
 
 
 ## Instalation
 
 ```sh
 git clone https://github.com/TaliAly/dotfiles.git ~/.dotfiles
-
-# or if you prefer ssh
-git clone git@github.com:TaliAly/dotfiles.git ~/.dotfiles
-
-```
-
-and then just run
-```sh
+cd ~/.dotfiles
 ./bootstrap.sh
 ```
 
+## Post Installation
+
+- Configure with Packer to install my config [Neovim | Packer](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+- Update/Install [Fisher | Fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation) to Fish
+
+
 ## Todo's
+
+- Add a way to save old config files (in case I'm dumb)
 
 ## Credits
 This repo has a lot of code adapted/implemented from [Theprimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles), so you should really go check it out.
