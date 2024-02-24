@@ -8,6 +8,8 @@ About me:
 - Neovim
 - Dead simple
 
+![desktop](./assets/desktop.png)
+
 ## Requirements
 
 - [Stow](https://www.gnu.org/software/stow/)
