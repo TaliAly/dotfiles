@@ -1,21 +1,34 @@
 {
   "position": "top",
   "mod": "dock",
+  "layer": "top",
   //"width": 1356,
-  "modules-left": ["clock", "network"],
+  "modules-left": ["clock", "network", "hyprland/submap"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray", "pulseaudio", "battery"],
+  "modules-right": ["tray","custom/wallpaper","pulseaudio", "battery"],
   // Modules configuration
 
-  "hyprland/window": {
-      "max-length": 40,
-      "separate-outputs": true
+  "hyprland/submap": {
+      "format": "{}",
+      "max-length": 30,
+      "tooltip": false
+  },
+  "hyprland/mode": {
+      "format": " {}",
+      "max-length": 50,
+      "always-on": true,
+      "no-mode-message": "No Mode",
   },
 
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
     "format": "{icon}",
+  },
+   "custom/wallpaper": {
+    "interval": 36000,
+    "format": " ",
+    "on-click": "~/.config/hypr/scripts/swwwallselect.sh",
   },
   "clock": {
     "format": "<span foreground='#C6AAE8'> </span>{:%a %H:%M}",

@@ -59,4 +59,5 @@ cd ~/.dotfiles
 - Add a way to save old config files (in case I'm dumb)
 
 ## Credits
-This repo has a lot of code adapted/implemented from [Theprimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles), so you should really go check it out.
+- [Theprimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles)
+- [Rose pine theme](https://github.com/rose-pine)

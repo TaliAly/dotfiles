@@ -1,2 +1,2 @@
-require('takis.remap')
+require('takis.keybinds')
 require('takis.set')
