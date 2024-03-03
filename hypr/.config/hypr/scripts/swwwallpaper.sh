@@ -1,6 +1,15 @@
 #!/bin/bash
-#
 
 
-swww init --config ~/.config/swww/config
+wall=$(cat wall.set)
+
+swww init 
+swww img $wall
+
+if [ -z $1 ]; then
+    swww kill
+    swww init 
+    swww img $wall
+fi
+
 
