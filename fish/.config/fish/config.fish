@@ -11,6 +11,7 @@ if status is-interactive
     alias plszyp "sudo zypper"
     alias ls "eza"
     alias trees "eza --tree --color always | less -R"
+    alias untar "tar -xvzf"
 
 end
 

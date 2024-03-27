@@ -56,7 +56,8 @@
       "format-ethernet": "<span size='13000' foreground='#F2CECF'>󰤭</span> Disconnected",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "<span size='13000' foreground='#F2CECF'> </span>Disconnected",
-      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+      "on-click": "kitty -e nmtui",
   },
   "pulseaudio": {
       "on-click": "pavucontrol",
