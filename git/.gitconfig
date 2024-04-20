@@ -1,24 +1,25 @@
 [user]
 	name = Tali
-    email = allysonnomuraga@gmail.com
+	email = allysonnomuraga@gmail.com
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-    clean = git-lfs clean -- %f
+	clean = git-lfs clean -- %f
 [alias]
-    cp = cherry-pick
-    undo = reset HEAD~
-    amend = commit --amend --no-edit
-    logl = log --oneline --decorate --graph
-    lsb = branch -a --list
-    rmb = branch -D
-    diff = difftool -t vimdiff -y
-    cpre = checkout -b %1 origin/%1
-
+	cp = cherry-pick
+	undo = reset HEAD~
+	amend = commit --amend --no-edit
+	logl = log --oneline --decorate --graph
+	lsb = branch -a --list
+	rmb = branch -D
+	diff = difftool -t vimdiff -y
+	cpre = checkout -b %1 origin/%1
 [log]
-    date = human
+	date = human
 [help]
 	autocorrect = 1
 [protocol]
 	version = 2
+[init]
+	defaultbranch = main

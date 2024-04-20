@@ -35,9 +35,15 @@ window#waybar {
     color: #191724;
 }
 
+#custom-powermenu {
+    margin-right: 11px;
+    padding: 1px 10px;
+}
+
 #tray,
 #mpd,
 #custom-weather,
+#custom-powermenu,
 #cpu, 
 #temperature, 
 #memory,

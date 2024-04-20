@@ -3,9 +3,9 @@
   "mod": "dock",
   "layer": "top",
   //"width": 1356,
-  "modules-left": ["clock", "network", "hyprland/submap"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray","custom/wallpaper","pulseaudio", "battery"],
+  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-center": ["clock"],
+  "modules-right": ["network","pulseaudio", "battery", "tray"],
   // Modules configuration
 
   "hyprland/submap": {
@@ -30,10 +30,19 @@
     "format": " ",
     "on-click": "~/.config/hypr/scripts/swwwallselect.sh",
   },
-  "clock": {
-    "format": "<span foreground='#C6AAE8'> </span>{:%a %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  "custom/powermenu": {
+      "interval": 360000,
+      "format": "",
+      "on-click": "~/.config/hypr/scripts/power-menu.sh",
   },
+
+    "clock": {
+        "format": "{:%a %d %B - %H:%M }",
+        "timezone": "America/Bogota",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+        // END CLOCK FORMAT
+    },
 
   "battery": {
     "states": {
@@ -44,7 +53,7 @@
     "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
     "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
     "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'></span>{capacity}%",
     "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
     "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
     "format-icons": ["", "", "", "", ""],
@@ -52,7 +61,7 @@
   },
 
   "network": {
-      "format-wifi": "<span size='13000' foreground='#F2CECF'> </span> Keep going :)",
+      "format-wifi": "<span size='13000' foreground='#F2CECF'> </span>",
       "format-ethernet": "<span size='13000' foreground='#F2CECF'>󰤭</span> Disconnected",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "<span size='13000' foreground='#F2CECF'> </span>Disconnected",
