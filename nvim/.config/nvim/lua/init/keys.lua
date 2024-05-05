@@ -14,3 +14,8 @@ vim.keymap.set("n", "<leader>bn", ":bn<CR>", opt)
 
 -- If new me read this, you should search for something to list the current
 -- buffers and search with fzf
+-- new new me, please do that, I'm beggin you
+
+-- indent shortcut to not have to reach all the way to =ap
+
+vim.keymap.set("n", "<leader>cf", "=ap<CR>", opt)

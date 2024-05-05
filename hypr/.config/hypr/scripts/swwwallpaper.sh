@@ -3,7 +3,7 @@
 
 wall=$(cat wall.set)
 
-swww init 
+swww-daemon --format xrgb
 swww img $wall
 
 if [ -z $1 ]; then

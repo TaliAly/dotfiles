@@ -2,10 +2,14 @@
   "position": "top",
   "mod": "dock",
   "layer": "top",
-  //"width": 1356,
-  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
-  "modules-center": ["clock"],
-  "modules-right": ["network","pulseaudio", "battery", "tray"],
+
+  "modules-left": ["custom/powermenu","hyprland/submap","image"],
+  "modules-center": ["hyprland/workspaces",],
+  "modules-right": ["network", "bluetooth","pulseaudio","custom/mic","battery", "clock", "tray"],
+
+
+
+
   // Modules configuration
 
   "hyprland/submap": {
@@ -21,50 +25,39 @@
   },
 
   "hyprland/workspaces": {
-    "disable-scroll": false,
-    "all-outputs": true,
-    "format": "{icon}",
+      "disable-scroll": false,
+      "all-outputs": true,
+      "format": "{icon}",
   },
-   "custom/wallpaper": {
-    "interval": 36000,
-    "format": " ",
-    "on-click": "~/.config/hypr/scripts/swwwallselect.sh",
+  "clock": {
+      "format": "{: %H:%M }",
+      "timezone": "America/Bogota",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%B %d %Y}"
+          // END CLOCK FORMAT
   },
-  "custom/powermenu": {
-      "interval": 360000,
-      "format": "",
-      "on-click": "~/.config/hypr/scripts/power-menu.sh",
-  },
-
-    "clock": {
-        "format": "{:%a %d %B - %H:%M }",
-        "timezone": "America/Bogota",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-        // END CLOCK FORMAT
-    },
 
   "battery": {
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
-    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
-    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#B1E3AD'></span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
-    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format": "<span>{icon}</span> {capacity}%",
+    "format-warning": "<span>{icon}</span> {capacity}%",
+    "format-critical": "<span>{icon}</span> {capacity}%",
+    "format-charging": "<span> </span>{capacity}%",
+    "format-plugged": "<span></span>{capacity}%",
+    "format-alt": "<span>{icon}</span> {time}",
+    "format-full": "<span> </span>",
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "{time}"
   },
 
   "network": {
-      "format-wifi": "<span size='13000' foreground='#F2CECF'> </span>",
-      "format-ethernet": "<span size='13000' foreground='#F2CECF'>󰤭</span> Disconnected",
+      "format-wifi": "<span> </span>",
+      "format-ethernet": "<span foreground='#403d52'>󰤭 </span>",
       "format-linked": "{ifname} (No IP) ",
-      "format-disconnected": "<span size='13000' foreground='#F2CECF'> </span>Disconnected",
+      "format-disconnected": "<span foreground='#403d52'>󰤭 </span>",
       "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
       "on-click": "kitty -e nmtui",
   },
@@ -73,18 +66,57 @@
       "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
       "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
       "on-right-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "format": "<span size='13000' foreground='#EBDDAA'>{icon}</span>  {volume}%",
-      "format-muted": "<span size='14000' foreground='#EBDDAA'></span>  Muted",
+      "format": "<span>{icon}</span>",
+      "format-muted": "<span></span>  Muted",
       "format-icons": {
-          "headphone": "",
-          "hands-free": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": ["", ""]
+          "headphone": " ",
+          "hands-free": " ",
+          "headset": " ",
+          "phone": " ",
+          "portable": " ",
+          "car": " ",
+          "default": [" ", " "]
       }
   },
+    "bluetooth": {
+	    "format": "",
+	    "format-disabled": "<span foreground='#403d52'></span>", // an empty format will hide the module
+	    "format-connected": "",
+	    "tooltip-format": "{device_alias}",
+	    "tooltip-format-connected": "",
+	    "tooltip-format-enumerate-connected": "{device_alias}",
+      "on-click": "blueman-manager"
+
+    },
+
+    // CUSTOM MODULES
+  "custom/mic": {
+      "format": "{}",
+      "exec": "~/.config/waybar/scripts/mic.sh",
+      "tooltip": false,
+      "tooltip-format": "{}",
+      "on-click": "amixer set Capture toggle"
+  },
+  "custom/wallpaper": {
+      "interval": 36000,
+      "format": " ",
+      "on-click": "~/.config/hypr/scripts/swwwallselect.sh",
+  },
+  "custom/powermenu": {
+      "interval": 360000,
+      "format": "",
+      "on-click": "sh -c '(~/.config/rofi/scripts/power-menu.sh)' & disown",
+      "tooltip": false 
+  },
+  "image": {
+        "exec": "/home/takis/.config/waybar/scripts/img.sh",
+        "size": 28,
+        "interval": 360000,
+        "format": "{}",
+        "on-click": "nautilus",
+  },
+
+  // END OF CUSTOM
   "tray": {
       "icon-size": 18,
       "spacing": 5

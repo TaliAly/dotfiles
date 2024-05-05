@@ -1,62 +1,47 @@
 # Allyson Rowe's Dotfiles
 
-A simple storage for my dotfiles in my linux machine.
-I'm using [Stow](https://www.gnu.org/software/stow/) as my manager for dotfiles, in case that you're interested.
+A simple storage for my dotfiles using stow.
 
-About me:
-- Linux user | Open Suse
-- Neovim
-- Dead simple
+*What about it?* I like it simple, so don't worry about large files (maybe)
 
-![desktop](./assets/desktop.png)
+And also, I want it to be easy to configure ;)
 
 ## Requirements
 
 - [Stow](https://www.gnu.org/software/stow/)
 - [Fish](https://fishshell.com/)
+- [A nerd font (Jetbrains)](https://www.nerdfonts.com/)
 
-Depending on your distro, you need to install
-
-```
-sudo zypper install fish stow
-sudo dnf install fish stow
-sudo pacman -S fish stow
-sudo apt install fish stow
-```
-
-Then set your default shell to fish
-
-```
-chsh -s $(which fish)
-```
+And the packages that I use
 
 ## Packages
-
-You can search each package later if you want to. But you'll need to install these
-
-```
-fzf neovim tmux eza hyprland wofi waybar dunst blight 
+Just use your favorite package manager. Me? I use two
 
 ```
+sudo dnf install neovim tmux hyprland rofi waybar dunst git
+cargo install fzf eza blight ripgrep
 
+```
 
 ## Instalation
 
 ```sh
 git clone https://github.com/TaliAly/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./bootstrap.sh
+stow . # It just because 
 ```
+## Post Instalation
 
-## Post Installation
+As you might tell, I use the theme of [Rose Pine]() a lot which, is great until you consider that I don't add the apps that I use with it. Why? Because I don't care about them, maybe in the future.
 
-- Configure with Packer to install my config [Neovim | Packer](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
-- Update/Install [Fisher | Fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation) to Fish
+### Neovim
+If you have trouble with Lazy, just move the config folders out and let lazy install itself into the editor, then you can add the files.
 
+### Why cargo?
+Because sometimes my package manager won't have some utils that I like, and I hate that, so I found out that cargo can install in a self contained enviroment and I'm happy with that.
 
-## Todo's
-
-- Add a way to save old config files (in case I'm dumb)
+### Why fish?
+it's fast, good and it's less hassle to add scripts to it (but writing them can be quite challenging)
 
 ## Credits
 - [Theprimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles)

@@ -1,0 +1,6 @@
+[2024-05-04 23:01:46.412] [info] Using configuration file /home/takis/.config/waybar/config
+[2024-05-04 23:01:46.416] [info] Discovered appearance 'dark'
+[2024-05-04 23:01:46.416] [info] Using CSS file /home/takis/.config/waybar/style.css
+[2024-05-04 23:01:46.423] [info] Hyprland IPC starting
+[2024-05-04 23:01:46.423] [warning] Mapping is not an object
+[2024-05-04 23:01:46.737] [info] Bar configured (width: 1366, height: 48) for output: eDP-1
