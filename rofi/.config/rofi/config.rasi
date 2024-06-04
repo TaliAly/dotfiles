@@ -11,7 +11,7 @@
 	red: #eb6f92;
 	yel: #f6c177;
 
-	font: "Jetbrains Mono 12";
+	font: "JetbrainsMono Nerd Font 12";
 
 	foreground: @fgd;
 	background: @bg;

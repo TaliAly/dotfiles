@@ -1,29 +1,27 @@
 *{
-    font-family: JetBrainsMono;
+    font-family: JetbrainsMono Nerd Font;
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
     color:#e0def4;
-    background-color: #191724;
-    margin: 10px;
-    padding: 0 24px; 
-    border-radius: 12px;
+    background-color: #232136;
+    border-radius: 8px;
 }
 
 #workspaces{
-    padding: 5px;
+    font-size:12px;
+    padding: 0 5px;
     padding-left:11px;
     margin: 5px;
     background-color:#1f1d2e;
-    border-radius:99px
+    border-radius:99px;
 }
 
 #workspaces button{
     border-radius: 99px;
     margin-right: 10px;
-    /* padding: 1px 10px; */
     font-weight: bolder;
     background-color: #181818;
     color: #ffffff;
@@ -31,11 +29,12 @@ window#waybar {
 
 #workspaces button.active, #workspaces button.focused{
     background: #c4a7e7;
+    font-size:14px;
 }
 
 #custom-powermenu {
     margin-left: 11px;
-    padding: 1px 10px;
+    padding: 0 10px;
 }
 #custom-mic {
     padding: 0 10px;
@@ -55,16 +54,14 @@ window#waybar {
 #disk,
 #custom-recorder,
 #custom-audiorec,
-#battery > span, 
+#battery, 
 #custom-mic,
 #custom-image,
 #bluetooth,
+#clock,
 #network {
     padding: 0 10px;
-    font-size:16px;
-}
-#clock {
-    font-size:13px;
+    font-size:14px;
 }
 
 #bluetooth .connected {
@@ -82,4 +79,6 @@ window#waybar {
     margin: 5px 0;
     padding: 0 10px;
 }
+
+
 

@@ -1,8 +1,5 @@
-require("init.opts")
-require("init.lazy")
-require("init.set")
-require("init.keys")
-require("plugins.init")
+require("init.init")
+require("plugins")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

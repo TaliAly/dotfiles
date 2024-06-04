@@ -1,0 +1,5 @@
+require("init.lazy")
+require("init.opts")
+require("init.set")
+require("init.snips")
+require("init.keys")

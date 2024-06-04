@@ -2,6 +2,9 @@
   "position": "top",
   "mod": "dock",
   "layer": "top",
+  "width": 1356,
+  "height": 40,
+  "margin-top": 3,
 
   "modules-left": ["custom/powermenu","hyprland/submap","image"],
   "modules-center": ["hyprland/workspaces",],
@@ -26,15 +29,25 @@
 
   "hyprland/workspaces": {
       "disable-scroll": false,
+      "on-click": "activate",
       "all-outputs": true,
       "format": "{icon}",
+      "format-icons": {
+          "1": "ナ",
+          "2": "ニ",
+          "3": "ヌ",
+          "4": "ネ",
+          "5": "ノ",
+          "6": "マ", 
+          "7": "ミ",
+          "8": "ム",
+      }
   },
+
   "clock": {
-      "format": "{: %H:%M }",
+      "format": "{:   %I:%M %p }",
       "timezone": "America/Bogota",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%B %d %Y}"
-          // END CLOCK FORMAT
+      "on-click": "kitty -e tuime",
   },
 
   "battery": {
@@ -45,11 +58,11 @@
     "format": "<span>{icon}</span> {capacity}%",
     "format-warning": "<span>{icon}</span> {capacity}%",
     "format-critical": "<span>{icon}</span> {capacity}%",
-    "format-charging": "<span> </span>{capacity}%",
-    "format-plugged": "<span></span>{capacity}%",
+    "format-charging": "<span> </span> {capacity}%",
+    "format-plugged": "<span></span> {capacity}%",
     "format-alt": "<span>{icon}</span> {time}",
     "format-full": "<span> </span>",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [" ", " ", " ", " ", " "],
     "tooltip-format": "{time}"
   },
 
@@ -61,6 +74,7 @@
       "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
       "on-click": "kitty -e nmtui",
   },
+
   "pulseaudio": {
       "on-click": "pavucontrol",
       "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
@@ -78,16 +92,17 @@
           "default": [" ", " "]
       }
   },
-    "bluetooth": {
-	    "format": "",
-	    "format-disabled": "<span foreground='#403d52'></span>", // an empty format will hide the module
-	    "format-connected": "",
-	    "tooltip-format": "{device_alias}",
-	    "tooltip-format-connected": "",
-	    "tooltip-format-enumerate-connected": "{device_alias}",
-      "on-click": "blueman-manager"
 
-    },
+  "bluetooth": {
+      "format": "",
+      "format-disabled": "<span foreground='#403d52'></span>", // an empty format will hide the module
+      "format-connected": "",
+      "tooltip-format": "{device_alias}",
+      "tooltip-format-connected": "",
+      "tooltip-format-enumerate-connected": "{device_alias}",
+      "on-click": "rfkill toggle bluetooth",
+      "on-click-right": "blueman-manager",
+  },
 
     // CUSTOM MODULES
   "custom/mic": {
@@ -108,6 +123,12 @@
       "on-click": "sh -c '(~/.config/rofi/scripts/power-menu.sh)' & disown",
       "tooltip": false 
   },
+  "custom/wlsunset": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "[[ ! pgrep wlsunset ]] && wlsunset || killall wlsunset"
+  },
+
   "image": {
         "exec": "/home/takis/.config/waybar/scripts/img.sh",
         "size": 28,

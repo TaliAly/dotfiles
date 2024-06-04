@@ -3,7 +3,10 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Projects ~/University ~/Personal -mindepth 1 -maxdepth 1 -type d | fzf --border --layout=reverse)
+    # Just in case you get some error
+    # you might need to change the folder
+    # where you get the list
+    selected=$(find ~/Projects -mindepth 1 -maxdepth 1 -type d | fzf --border --layout=reverse)
 fi
 
 if [[ -z $selected ]]; then

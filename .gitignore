@@ -8,7 +8,6 @@ fish/.config/fish/fish_variables
 
 # Since I use fisher
 fish/.config/fish/functions/*
-fish/.config/fish/completions/*
 fish/.config/fish/conf.d/*
 # Only show user scripts
 !fish/.config/fish/functions/profile
